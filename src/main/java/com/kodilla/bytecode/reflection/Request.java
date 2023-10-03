@@ -1,7 +1,9 @@
 package com.kodilla.bytecode.reflection;
 
 public class Request {
-    private long n = 20;
+    @Range
+    private int n = 20;
+    @Range
     private int z = 10;
 
     public long getN() {
@@ -10,14 +12,6 @@ public class Request {
 
     public int getZ() {
         return z;
-    }
-
-    public Request(long n) {
-        this.n = n;
-    }
-
-    public Request(int z) {
-        this.z = z;
     }
 
     public Request() {
