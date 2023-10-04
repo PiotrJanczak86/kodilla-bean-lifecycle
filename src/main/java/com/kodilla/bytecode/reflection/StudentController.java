@@ -21,7 +21,7 @@ import java.util.Map;
 @RequestMapping("/v1/students")
 public class StudentController {
 
-    @PostMapping
+    @GetMapping
     public ResponseEntity<Object> getStudentMap(@Valid @RequestBody Request request) throws NoSuchFieldException, IllegalAccessException {
         Field indexField = Student.class.getDeclaredField("indexNumber");
         indexField.setAccessible(true);
